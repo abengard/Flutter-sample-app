@@ -1,16 +1,17 @@
 # sample_app
 
-A new Flutter project.
+This app was originally an educational app developed during my student project. I have reworked the app so that the app can be used as a kind of sample app. 
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Firebase:** The app is connected to Firebase. The sample app uses the Authentication function here. You can either register with a fantasy email and a 6-digit password or use these login details: 
+  - E-Mail: sample@app.de
+  - Password: 123456
+- Using templates in Firebase, you can also reset the password in the app via your email.
+  
+<img src="https://github.com/abengard/flutter-sample-app/blob/master/assets/Images/Login%20%2B%20Reset-Password%20Window.PNG" width="600">
 
-A few resources to get you started if this is your first Flutter project:
+- **Folder structure:** For sorting individual lectures and homework tasks, which can be structured by topic  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/abengard/flutter-sample-app/blob/master/assets/Images/Folder-%20%2B%20Subfolder%20Window.PNG" width="600">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
