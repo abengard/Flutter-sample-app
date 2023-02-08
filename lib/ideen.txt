@@ -1,0 +1,767 @@
+
+////////////////////////////EINGELOGGT ALS /////////////// 
+
+Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const Text(
+              'Eingeloggt als',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            Text(user.email!, style: const TextStyle(fontSize: 20)),
+            const SizedBox(height: 40),
+            ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(50),
+              ),
+              icon: const Icon(Icons.arrow_back, size: 32),
+              label: const Text(
+                'Ausloggen',
+                style: TextStyle(fontSize: 24),
+              ),
+              onPressed: () => FirebaseAuth.instance.signOut(),
+            )
+          ])),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          validator: (email) => 
+                  email != null && !EmailValidator.validate(email)
+                      ? 'Email-Adresse ungültig'
+                      : null,
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         Align(
+              child: Material(
+                child: PopupMenuButton<String>(
+                  elevation: 2.0,
+                  onSelected: (String result) {
+                    setState(() {
+                      dp1 = result;
+                      print('Selection $dp1');
+                    });
+                  },
+                  child: Container(
+                    width: 150.0,
+                    height: 42.0,
+                    decoration: Dropdecoration(),
+                    child: Center(child: DropInputText(dp1)),
+                  ),
+                  itemBuilder: (BuildContext context) =>
+                      <PopupMenuEntry<String>>[
+                    PopupMenuItem<String>(
+                        value: null,
+                        child: PopupMenuButton<String>(
+                            child: Text(SchichtenKat[0]),
+                            onSelected: (String result) {
+                              setState(() {
+                                print('Selected $result');
+                              });
+                            },
+                            itemBuilder: (BuildContext context) =>
+                                <PopupMenuEntry<String>>[
+                                  PopupMenuItem<String>(
+                                    value: Bauplatten[0],
+                                    child: Text(Bauplatten[0]),
+                                  ),
+                                  PopupMenuItem<String>(
+                                    value: Bauplatten[1],
+                                    child: Text(Bauplatten[1]),
+                                  ),
+                                ])),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[1],
+                      child: Text(SchichtenKat[1]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[2],
+                      child: Text(SchichtenKat[2]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[3],
+                      child: Text(SchichtenKat[3]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[4],
+                      child: Text(SchichtenKat[4]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[5],
+                      child: Text(SchichtenKat[5]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[6],
+                      child: Text(SchichtenKat[6]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[7],
+                      child: Text(SchichtenKat[7]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[8],
+                      child: Text(SchichtenKat[8]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[9],
+                      child: Text(SchichtenKat[9]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[10],
+                      child: Text(SchichtenKat[10]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: SchichtenKat[11],
+                      child: Text(SchichtenKat[11]),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            //////////////////////////////////////////////////////////
+            ///
+            ///
+            Align(
+              child: Material(
+                child: PopupMenuButton<String>(
+                  elevation: 2.0,
+                  onSelected: (String result) {
+                    setState(() {
+                      dp2 = result;
+                      print('Selection $dp2');
+                    });
+                  },
+                  child: Container(
+                      width: 150.0,
+                      height: 42.0,
+                      decoration: Dropdecoration(),
+                      child: Center(child: DropInputText(dp2))),
+                  itemBuilder: (BuildContext context) =>
+                      <PopupMenuEntry<String>>[
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[0],
+                      child: Text(AnzahlSchichten[0]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[1],
+                      child: Text(AnzahlSchichten[1]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[2],
+                      child: Text(AnzahlSchichten[2]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[3],
+                      child: Text(AnzahlSchichten[3]),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ]),
+          SizedBox(height: 15),
+
+///////////////////////////////////////////////////Reihe 2
+
+          Row(children: [
+            SizedBox(width: 21),
+            Align(
+              child: Material(
+                child: PopupMenuButton<String>(
+                  elevation: 2.0,
+                  onSelected: (String result) {
+                    setState(() {
+                      dp3 = result;
+                      print('Selection $dp3');
+                    });
+                  },
+                  child: Container(
+                    width: 150.0,
+                    height: 42.0,
+                    decoration: Dropdecoration(),
+                    child: Center(child: DropInputText(dp3)),
+                  ),
+                  itemBuilder: (BuildContext context) =>
+                      <PopupMenuEntry<String>>[
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[0],
+                      child: Text(AnzahlSchichten[0]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[1],
+                      child: Text(AnzahlSchichten[1]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[2],
+                      child: Text(AnzahlSchichten[2]),
+                    ),
+                    PopupMenuItem<String>(
+                      value: AnzahlSchichten[3],
+                      child: Text(AnzahlSchichten[3]),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+/////////////////////////////////////////////////////////////////////////////////
+            ///
+            SizedBox(width: 20),
+            Visibility(
+                child: Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dp4 = result;
+                          print('Selection $dp4');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dp4)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                visible: visibledp4)
+          ]),
+          SizedBox(height: 15),
+
+//////////////////////////////////Reihe 3
+          ///
+
+          Row(children: [
+            SizedBox(width: 21),
+            Visibility(
+              child: Align(
+                child: Material(
+                  child: PopupMenuButton<String>(
+                    elevation: 2.0,
+                    onSelected: (String result) {
+                      setState(() {
+                        dp5 = result;
+                        print('Selection $dp5');
+                      });
+                    },
+                    child: Container(
+                      width: 150.0,
+                      height: 42.0,
+                      decoration: Dropdecoration(),
+                      child: Center(child: DropInputText(dp5)),
+                    ),
+                    itemBuilder: (BuildContext context) =>
+                        <PopupMenuEntry<String>>[
+                      PopupMenuItem<String>(
+                        value: AnzahlSchichten[0],
+                        child: Text(AnzahlSchichten[0]),
+                      ),
+                      PopupMenuItem<String>(
+                        value: AnzahlSchichten[1],
+                        child: Text(AnzahlSchichten[1]),
+                      ),
+                      PopupMenuItem<String>(
+                        value: AnzahlSchichten[2],
+                        child: Text(AnzahlSchichten[2]),
+                      ),
+                      PopupMenuItem<String>(
+                        value: AnzahlSchichten[3],
+                        child: Text(AnzahlSchichten[3]),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              visible: visibledp5,
+            ),
+
+/////////////////////////////////////////////////////////////////////////////////
+            ///
+            SizedBox(width: 20),
+            Visibility(
+                child: Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dp6 = result;
+                          print('Selection $dp6');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dp6)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                visible: visibledp6)
+          ]),
+          SizedBox(height: 15),
+        ]),
+        visible: _isvisible1,
+      ),
+
+      */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+/*
+    
+      Column(children: [
+              SizedBox(height: 10),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+//////////////////////////////////Reihe 1
+                ///
+
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                //////////////////////////////////////////////////////////
+                ///
+                ///
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
+              SizedBox(height: 15),
+
+///////////////////////////////////////////////////Reihe 2
+
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+/////////////////////////////////////////////////////////////////////////////////
+                ///
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
+              SizedBox(height: 15),
+
+//////////////////////////////////Reihe 3
+              ///
+
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+/////////////////////////////////////////////////////////////////////////////////
+                ///
+                Align(
+                  child: Material(
+                    child: PopupMenuButton<String>(
+                      elevation: 2.0,
+                      onSelected: (String result) {
+                        setState(() {
+                          dropdown2 = result;
+                          Bildchange(dropdown1, dropdown2);
+                          print('Selection $dropdown2');
+                        });
+                      },
+                      child: Container(
+                        width: 150.0,
+                        height: 42.0,
+                        decoration: Dropdecoration(),
+                        child: Center(child: DropInputText(dropdown2)),
+                      ),
+                      itemBuilder: (BuildContext context) =>
+                          <PopupMenuEntry<String>>[
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[0],
+                          child: Text(AnzahlSchichten[0]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[1],
+                          child: Text(AnzahlSchichten[1]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[2],
+                          child: Text(AnzahlSchichten[2]),
+                        ),
+                        PopupMenuItem<String>(
+                          value: AnzahlSchichten[3],
+                          child: Text(AnzahlSchichten[3]),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
+              SizedBox(height: 15),
+            ]))
+    }
+
+
+
+
+////////////////////////////////////////Eigene Schichtauswahl//////////////////////////
+      ///
+
+      Align(
+          child: Column(children: [
+        ExpandablePanel(
+            header: Column(children: [
+              SizedBox(height: 10),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Eigene Schichtauswahl:",
+                    style:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              )
+            ]),
+            collapsed: SizedBox(height: 0),
+            expanded: Column(children: [
+              SizedBox(height: 10),
+              Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                Align(
+                  child: Text("Schicht 1:",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                ),
+              ]),
+              SizedBox(height: 15),
+
+////////////////////////////////////////////////////////nächste Spalte
+              Row(mainAxisAlignment: MainAxisAlignment.start, children: [])
+            ])),
+      ]))
+    
+  }
+
+*/
+
+
+Datum SPerre
+
+class Bauphysikthemen extends StatefulWidget {
+  final icount;
+
+  Bauphysikthemen({
+    Key? key,
+    @required this.icount,
+  }) : super(key: key);
+
+  @override
+  State<Bauphysikthemen> createState() => _BauphysikthemenState(icount);
+}
+
+class _BauphysikthemenState extends State<Bauphysikthemen> {
+  final icount;
+
+  _BauphysikthemenState(this.icount);

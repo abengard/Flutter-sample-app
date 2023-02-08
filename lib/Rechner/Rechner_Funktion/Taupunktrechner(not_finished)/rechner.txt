@@ -1,0 +1,423 @@
+import 'package:flutter/material.dart';
+import 'package:quiz/Rechner/dropdownmenu.dart';
+import 'package:quiz/widgets.dart';
+
+class Rechner extends StatefulWidget {
+  const Rechner({Key key}) : super(key: key);
+
+  @override
+  State<Rechner> createState() => _RechnerState();
+}
+
+class _RechnerState extends State<Rechner> {
+  String selectedValue;
+  List<DropdownMenuItem<String>> menuitems = List();
+  String value = "";
+  bool disabledropdown1 = true;
+  bool disabledropdown2 = true;
+  bool disabledropdown3 = true;
+  bool disabledropdown4 = true;
+  String selValue1;
+  String selValue2;
+  String selValue3;
+  String selValue4;
+
+  bool _value = false;
+
+  //////////////////////////////////Dropdown-Menü 1///////////////////////
+
+  final Schicht_1a1 = {
+    "1": "Schicht 2b",
+    "2": "Schicht 2c",
+  };
+
+  void populateSchicht_1a1() {
+    for (String key in Schicht_1a1.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1a1[key]),
+        ),
+        value: Schicht_1a1[key],
+      ));
+    }
+  }
+
+  final Schicht_1a2 = {
+    "1": "Schicht 2b",
+    "2": "Schicht 2c",
+    "3": "Schicht 2f",
+    "4": "Schicht 2g",
+  };
+
+  void populateSchicht_1a2() {
+    for (String key in Schicht_1a2.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1a2[key]),
+        ),
+        value: Schicht_1a2[key],
+      ));
+    }
+  }
+
+  final Schicht_1b1 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2c",
+  };
+
+  void populateSchicht_1b1() {
+    for (String key in Schicht_1b1.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1b1[key]),
+        ),
+        value: Schicht_1b1[key],
+      ));
+    }
+  }
+
+  final Schicht_1b2 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2c",
+    "3": "Schicht 2f",
+    "4": "Schicht 2g",
+  };
+
+  void populateSchicht_1b2() {
+    for (String key in Schicht_1b2.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1b2[key]),
+        ),
+        value: Schicht_1b2[key],
+      ));
+    }
+  }
+
+  final Schicht_1c1 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+  };
+
+  void populateSchicht_1c1() {
+    for (String key in Schicht_1c1.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1c1[key]),
+        ),
+        value: Schicht_1c1[key],
+      ));
+    }
+  }
+
+  final Schicht_1c2 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+    "3": "Schicht 2f",
+    "4": "Schicht 2g",
+  };
+
+  void populateSchicht_1c2() {
+    for (String key in Schicht_1c2.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1c2[key]),
+        ),
+        value: Schicht_1c2[key],
+      ));
+    }
+  }
+
+  final Schicht_1d1 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+    "3": "Schicht 2c",
+  };
+
+  void populateSchicht_1d1() {
+    for (String key in Schicht_1d1.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1d1[key]),
+        ),
+        value: Schicht_1d1[key],
+      ));
+    }
+  }
+
+  final Schicht_1d2 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+    "3": "Schicht 2c",
+    "4": "Schicht 2f",
+    "5": "Schicht 2g",
+  };
+
+  void populateSchicht_1d2() {
+    for (String key in Schicht_1d2.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1d2[key]),
+        ),
+        value: Schicht_1d2[key],
+      ));
+    }
+  }
+
+  final Schicht_1e1 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+    "3": "Schicht 2c",
+  };
+
+  void populateSchicht_1e1() {
+    for (String key in Schicht_1e1.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1e1[key]),
+        ),
+        value: Schicht_1e1[key],
+      ));
+    }
+  }
+
+  final Schicht_1e2 = {
+    "1": "Schicht 2a",
+    "2": "Schicht 2b",
+    "3": "Schicht 2c",
+    "4": "Schicht 2f",
+    "5": "Schicht 2g",
+  };
+
+  void populateSchicht_1e2() {
+    for (String key in Schicht_1e2.keys) {
+      menuitems.add(DropdownMenuItem<String>(
+        child: Center(
+          child: Text(Schicht_1e2[key]),
+        ),
+        value: Schicht_1e2[key],
+      ));
+    }
+  }
+
+  void selected(selectedValue) {
+    if (selectedValue == "1") {
+      disabledropdown1 = false;
+      disabledropdown2 = true;
+      disabledropdown3 = true;
+      disabledropdown4 = true;
+      selValue1 = null;
+      selValue2 = null;
+      selValue3 = null;
+      selValue4 = null;
+    } else if (selectedValue == "2") {
+      disabledropdown1 = false;
+      disabledropdown2 = false;
+      disabledropdown3 = true;
+      disabledropdown4 = true;
+      selValue1 = null;
+      selValue2 = null;
+      selValue3 = null;
+      selValue4 = null;
+    } else if (selectedValue == "3") {
+      disabledropdown1 = false;
+      disabledropdown2 = false;
+      disabledropdown3 = false;
+      disabledropdown4 = true;
+      selValue1 = null;
+      selValue2 = null;
+      selValue3 = null;
+      selValue4 = null;
+    } else if (selectedValue == "4") {
+      disabledropdown1 = false;
+      disabledropdown2 = false;
+      disabledropdown3 = false;
+      disabledropdown4 = false;
+      selValue1 = null;
+      selValue2 = null;
+      selValue3 = null;
+      selValue4 = null;
+    }
+    setState(() {
+      this.selectedValue = selectedValue;
+    });
+  }
+
+  void secondselected(selValue1) {
+    if (selValue1 == 'Schicht 1a') {
+      if (selectedValue == "3") {
+        menuitems = [];
+        populateSchicht_1a1();
+        selValue2 = null;
+      } else if (selectedValue == "2") {
+        menuitems = [];
+        populateSchicht_1a2();
+        selValue2 = null;
+      }
+    } else if (selValue1 == 'Schicht 1b') {
+      if (selectedValue == "3") {
+        menuitems = [];
+        populateSchicht_1b1();
+        selValue2 = null;
+      } else if (selectedValue == "2") {
+        menuitems = [];
+        populateSchicht_1b2();
+        selValue2 = null;
+      }
+    } else if (selValue1 == 'Schicht 1c') {
+      if (selectedValue == "3") {
+        menuitems = [];
+        populateSchicht_1c1();
+        selValue2 = null;
+      } else if (selectedValue == "2") {
+        menuitems = [];
+        populateSchicht_1c2();
+        selValue2 = null;
+      }
+    } else if (selValue1 == 'Schicht 1d') {
+      if (selectedValue == "3") {
+        menuitems = [];
+        populateSchicht_1d1();
+        selValue2 = null;
+      } else if (selectedValue == "2") {
+        menuitems = [];
+        populateSchicht_1d2();
+        selValue2 = null;
+      }
+    } else if (selValue1 == 'Schicht 1e') {
+      if (selectedValue == "3") {
+        menuitems = [];
+        populateSchicht_1e1();
+        selValue2 = null;
+      } else if (selectedValue == "2") {
+        menuitems = [];
+        populateSchicht_1e2();
+        selValue2 = null;
+      }
+    }
+    setState(() {
+      this.selValue1 = selValue1;
+    });
+  }
+
+  //////////////////////////////////////////Dropdown-Menü 1////////////////////
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: kopfzeile('Taupunkt-Rechner'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          SizedBox(height: 15),
+          Align(
+            alignment: Alignment(-0.9, 0.6),
+            child: Text('1. Auswahl der Schichten:',
+                style: TextStyle(fontSize: 16)),
+          ),
+          // Dropdown-Menü Anzahl der Schichten
+          Align(
+            alignment: Alignment(-0.8, 0.2),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.all(2.0),
+                child: DropdownButton(
+                  value: selectedValue,
+                  onChanged: (selectedValue) => selected(selectedValue),
+                  items: Anzahl,
+                  hint: Text('Anzahl der Schichten'),
+                ),
+              ),
+            ),
+          ),
+
+          // Dropdown-Menü 1
+          Align(
+            alignment: Alignment(-0.8, 0.2),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.all(2.0),
+                child: DropdownButton(
+                  value: selValue1,
+                  onChanged: disabledropdown1
+                      ? null
+                      : (selValue1) => secondselected(selValue1),
+                  items: Schicht1,
+                  hint: Text('Schicht 1'),
+                ),
+              ),
+            ),
+          ),
+
+          //Dropdown-Menü 2
+          Align(
+            alignment: Alignment(-0.8, 0.2),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.all(2.0),
+                child: DropdownButton(
+                  value: selValue2,
+                  onChanged: disabledropdown2
+                      ? null
+                      : (String value) => setState(() {
+                            selValue2 = value ?? "";
+                          }),
+                  items: menuitems,
+                  hint: Text('Schicht 2'),
+                ),
+              ),
+            ),
+          ),
+
+          //Dropdown-Menü 3
+          Align(
+            alignment: Alignment(-0.8, 0.2),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.all(2.0),
+                child: DropdownButton(
+                  value: selValue3,
+                  onChanged: disabledropdown3
+                      ? null
+                      : (String value) => setState(() {
+                            selValue3 = value ?? "";
+                          }),
+                  items: Schicht3,
+                  hint: Text('Schicht 3'),
+                ),
+              ),
+            ),
+          ),
+
+          //Dropdown-Menü 4
+          Align(
+            alignment: Alignment(-0.8, 0.2),
+            child: Container(
+              child: Padding(
+                padding: EdgeInsets.all(2.0),
+                child: DropdownButton(
+                  value: selValue4,
+                  onChanged: disabledropdown4
+                      ? null
+                      : (String value) => setState(() {
+                            selValue4 = value ?? "";
+                          }),
+                  items: Schicht4,
+                  hint: Text('Schicht 4'),
+                ),
+              ),
+            ),
+          ),
+        ],
+        Container(child: Row(
+      children: <Widget>[
+        Padding(padding: EdgeInsets.all(2.0),
+        child: Image.asset('assets/schichten.jpg')
+        ),
+      ],
+            ),
+        ),
+      ),
+    );
+  }
+}
