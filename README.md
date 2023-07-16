@@ -1,6 +1,8 @@
 # sample_app
 
-This app was originally an educational app for Building engineering physics developed during my student project. I have reworked the app so that the app can be used as a kind of sample app. This is my first app that I developed in Flutter and is also not a full app that exists in the play store or app store. 
+This app was originally an educational app for Building engineering physics developed during our student project. We have reworked the app so that the app can be used as a kind of sample app. This is our first app that we developed in Flutter and is also not a full app that exists in the play store or app store. 
+
+Made by: Artur Alekseevic Bengardt, Mohamed Tchelebi, Dominic Hagemann
 
 
 ## Features
